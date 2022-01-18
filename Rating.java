@@ -1,4 +1,4 @@
-public class Rating {
+public class Rating implements Comparable<Rating>{
     private double sumOfRatings;
     // the sum of all of the ratings
     private int raters;
@@ -23,6 +23,9 @@ public class Rating {
         double averageRating = (raters == 0) ? 0: (double) sumOfRatings / raters;
         return averageRating;
     } 
+    public int getRaters() {
+        return raters;
+    }
     // return the average rating; if there are no raters so far, return 0.0
     public String toString() {
         String returnString = getAverageRating() + " based on " + raters + " reviews";
@@ -32,4 +35,17 @@ public class Rating {
     reviews it is based on; for example, if the sum of the ratings is 32
     and that is based on ratings from ten people, the toString method will
     return “3.2 based on 10 reviews”*/
+
+    public int compareTo(Rating otherRating) {
+        int compareValue = 0;
+        if(getAverageRating() == otherRating.getAverageRating()) {
+            compareValue = (raters > otherRating.getRaters()) ? -1: 1;
+        } else {
+            compareValue = (getAverageRating() > otherRating.getAverageRating()) ? -1: 1;
+        }
+        return compareValue;
+    }
+    /*Ratings should	be	sorted	such	that	the	highest	average	rating	appears	first.	If	two	Rating	
+    objects	have	the	same	average,	the	one	with	the	higher	number	of	reviews	should	
+    appear	first.*/
 }

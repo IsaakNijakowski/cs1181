@@ -28,10 +28,10 @@ class Main{
     ratings.add(r1);
     ratings.add(r2);
     ratings.add(r3);
-    //Collections.sort(ratings);
+    Collections.sort(ratings);
    
-    /*for (Rating r: ratings) {
+    for (Rating r: ratings) {
     System.out.println(r);
-    }*/
+    }
   }
 }
