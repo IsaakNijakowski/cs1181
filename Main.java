@@ -9,8 +9,6 @@ import java.util.*;
 
 class Main{
   public static void main(String[] args){
-    System.out.println("Hello World!");
-
     Rating r1 = new Rating();
     System.out.println("r1: " + r1);
     r1.addRating(5);
