@@ -23,9 +23,6 @@ public class Rating implements Comparable<Rating>{
         double averageRating = (raters == 0) ? 0: (double) sumOfRatings / raters;
         return averageRating;
     } 
-    public int getRaters() {
-        return raters;
-    }
     // return the average rating; if there are no raters so far, return 0.0
     public String toString() {
         String returnString = getAverageRating() + " based on " + raters + " reviews";
@@ -39,7 +36,7 @@ public class Rating implements Comparable<Rating>{
     public int compareTo(Rating otherRating) {
         int compareValue = 0;
         if(getAverageRating() == otherRating.getAverageRating()) {
-            compareValue = (raters > otherRating.getRaters()) ? -1: 1;
+            compareValue = (raters > otherRating.raters) ? -1: 1;
         } else {
             compareValue = (getAverageRating() > otherRating.getAverageRating()) ? -1: 1;
         }
