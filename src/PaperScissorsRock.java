@@ -1,4 +1,9 @@
-
+/*
+ * Isaak Nijakowski
+ * CS1181L-06
+ * Practice Problem 2
+ * 1/27/2022
+ */
 public class PaperScissorsRock {
 	
 	Player player1;
