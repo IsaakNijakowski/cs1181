@@ -45,7 +45,7 @@ public class PaperScissorsRock {
 
 	public static void main(String[] args) {
 
-		Player player1 = new Player();
+		StrategicPlayer player1 = new StrategicPlayer(0.3,0.6,0.1);
 		Player player2 = new Player();
 		
 		int player1Wins = 0;

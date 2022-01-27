@@ -21,7 +21,7 @@ public class StrategicPlayer extends Player {
 		} else if (random < percentPaper + percentScissors + percentRock){
 			return "Rock";
 		} else {
-            return super.go();
+            return go();
         }
 	}
 }
